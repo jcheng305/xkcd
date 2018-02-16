@@ -10,6 +10,7 @@ export function loadComics (){
         payload: response.data,
         randomComic: response.data.img
     });
+    window.location = 'http://localhost:3000/'
   })
 .catch(function(error) {
   console.log(error);
