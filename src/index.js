@@ -16,7 +16,6 @@ class App extends React.Component{
     super()
     this.state= {
       comics: [],
-      display: 10
     }
     }
   componentDidMount() {
@@ -26,8 +25,6 @@ class App extends React.Component{
       console.log(response.data.comics);
       this.setState({
         comics: response.data,
-
-        display: 10
       })
   })
     .catch((error) => {
