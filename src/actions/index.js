@@ -2,16 +2,24 @@ import axios from 'axios';
 
 export function loadComics (){
   return(dispatch)=> {
-    return axios.get("https://xkcd.com/615/info.0.json")
-    .then((response)=> {
-      dispatch(generateComics(response.data));
-    })
+    return axios.get(`https://www.xkcd.com/${ getRandomInt() }/info.0.json`)
+    .then(function(response) {
+      console.log("response is",response)
+      dispatch({
+        type: "FETCH_COMICS",
+        payload: response.data,
+        randomComic: response.data.img
+    });
+  })
+.catch(function(error) {
+  console.log(error);
+  dispatch ({
+    type: "FETCH_COMICS_FAILED",
+    payload: error
+  });
+});
   }
 }
-
-export function generateComics(comics){
-  return {
-    type:"GENERATE_COMIC",
-    comics: comics
-  }
+function getRandomInt() {
+  return Math.floor(Math.random() * Math.floor(1900));
 }

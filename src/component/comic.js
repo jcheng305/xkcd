@@ -5,7 +5,7 @@ class Comic extends React.Component {
   render() {
     return (
       <div>
-            <button onClick={()=>{this.props.handleClick()}}>This will do something soon</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onClick={()=>{this.props.handleClick()}}>Generate Comics</button>
       </div>
 
     )
