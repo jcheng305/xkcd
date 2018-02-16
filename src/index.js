@@ -17,7 +17,7 @@ class App extends React.Component{
     this.state= {
       comics: [],
     }
-    }
+  }
   componentDidMount() {
     axios.get(`https://www.xkcd.com/${ getRandomInt() }/info.0.json` , {
     })
@@ -26,7 +26,7 @@ class App extends React.Component{
       this.setState({
         comics: response.data,
       })
-  })
+    })
     .catch((error) => {
       console.log(error);
     });

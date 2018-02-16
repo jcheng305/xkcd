@@ -9,16 +9,16 @@ export function loadComics (){
         type: "FETCH_COMICS",
         payload: response.data,
         randomComic: response.data.img
+      });
+      window.location = 'http://localhost:3000/'
+    })
+    .catch(function(error) {
+      console.log(error);
+      dispatch ({
+        type: "FETCH_COMICS_FAILED",
+        payload: error
+      });
     });
-    window.location = 'http://localhost:3000/'
-  })
-.catch(function(error) {
-  console.log(error);
-  dispatch ({
-    type: "FETCH_COMICS_FAILED",
-    payload: error
-  });
-});
   }
 }
 function getRandomInt() {
