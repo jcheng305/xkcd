@@ -8,7 +8,7 @@ This is a XKCD random comic generator. (WIP)
 
 
 # Instructions:
-* Be sure to install a CORS plugin (compatible with most browsers), due to the reason that a CORS error occurs when using the API. You must use the plugin or else you have no access to the api.
+* Be sure to install a CORS plugin (compatible with most browsers), due to the reason that a CORS error occurs when using the API. You must use the plugin or else you have no access to the api. You can use the following/similar plugins for your respective browser [here](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?hl=en)
 * When user clicks on button it'll generate a random comic.
 
 
@@ -24,4 +24,4 @@ This is a XKCD random comic generator. (WIP)
 * CSS
 
 ## Credits:
-[XKCD Comic creator]Randall Monroe (https://xkcd.com/about/)
+[XKCD Comic creator: Randall Monroe](https://xkcd.com/about/)
